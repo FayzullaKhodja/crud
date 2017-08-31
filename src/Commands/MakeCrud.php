@@ -137,7 +137,7 @@ class MakeCrud extends Command
         $ucf_name = ucfirst($name);
 
         $source_loc = $this->vendor_path.'/Model.php';
-        $dest_loc = app_path('Http/Controllers/Models/'.$ucf_name.'.php');
+        $dest_loc = app_path('Models/'.$ucf_name.'.php');
 
         if (!file_exists($dest_loc)) {
             $new_dir = dirname($dest_loc);

@@ -21,8 +21,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Заголовок</th>
-                        <th>Текст</th>
+                        <th>Дата</th>
                         <th width="100"></th>
                     </tr>
                 </thead>
@@ -57,19 +56,9 @@
                         @foreach(Config::get('app.supported_locales') as $i=>$v)
                         <div role="tabpanel" class="tab-pane fade in @if($i==0) active @endif" id="{{$v}}">
                             <div class="form-group">
-                                {!! Form::label('title', 'Заголовок') !!}
+                                {!! Form::label('title', 'Текст') !!}
                                 {!! Form::text('title_'.$v, null, ["class" => "form-control"]) !!}
                             </div>
-                            <div class="form-group">
-                                {!! Form::label('description', 'Описание') !!}
-                                {!! Form::text('description_'.$v, null, ['class' => 'form-control']) !!}
-                            </div>
-
-                            <div class="form-group">
-                                {!! Form::label('url', 'Cсылка') !!}
-                                {!! Form::text('url_'.$v, null, ['class' => 'form-control']) !!}
-                            </div>
-
                         </div>  
                         @endforeach  
                     </div>
@@ -110,12 +99,11 @@
             datatable: {
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'title_ru', name: 'title_ru'},
-                    {data: 'description_ru', name: 'description_ru'},
+                    {data: 'created_at', name: 'created_at'}
                 ],
                 columnDefs: [
                     {
-                        targets: 3,
+                        targets: 2,
                         data: null,
                         searchable:false, 
                         render: function (row, type, val, meta) {
