@@ -1,9 +1,8 @@
-# File upload for Laravel
+# A CRUD Generator Package For Laravel
 
 ## Requirements
 
 - PHP >=5.4
-- [Intervention Image](https://github.com/Intervention/image)
 
 ## Installation
 
