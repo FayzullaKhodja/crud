@@ -1,0 +1,20 @@
+{
+    "name": "khodja/crud",
+    "description": "Numero CMS CRUD for laravel 5.*",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fayzulla Khodja",
+            "email": "fayzulla@khodja.uz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Khodja\\Crud\\": "src/"
+        }
+    }
+}
